@@ -1,0 +1,40 @@
+.row{
+    margin-top: 30px;
+}
+
+.quantity-controls{
+    display:inline-block;
+    justify-content: flex-end;
+    position: relative;
+    top: 0;
+}
+
+.quantityItems{
+    font-size: 30px;
+}
+
+.btn-increase{
+    background-color: transparent;
+    color: #02D693;
+    border: none;
+    font-size: 30px;
+}
+.btn-increase:hover{
+    background-color: transparent;
+    color: #02D693;
+    border: none;
+    font-size: 30px;
+}
+
+.btn-decrease{
+    background-color: transparent;
+    color: #E5252C;
+    border: none;
+    font-size: 30px;
+}
+.btn-decrease:hover{
+    background-color: transparent;
+    color: #E5252C;
+    border: none;
+    font-size: 30px;
+}

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.sidenav {
+  height: 98vh;
+  width: 90px; 
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  border-radius: 10px;
+  // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  &.open {
+    width: 130px; 
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .toggle-btn {
+    background: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: 20px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+
+    li {
+      width: 100%;
+      padding: 15px 20px;
+      text-align: center;
+      &.active {
+        background: #000000;
+        padding: 4px 0 4px 0;
+        border-radius: 8px;
+        margin: 12px;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        color: #ffffff;
+        a {
+          color: #ffffff;
+        }
+      }
+      
+      a {
+        color: #020020;
+        display: flex;
+        font-weight: 700;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 0.3s;
+        width: 100%;
+        margin: 2px;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 1.4rem;
+
+        &:hover {
+          color: #ffffff;
+          background: #000000;
+        }
+
+        .fa-icon {
+          margin-right: 10px;
+        }
+
+        span {
+          margin-left: 10px;
+          display: inline-block;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .bottom {
+      margin-top: auto;
+      width: 100%;
+      padding-bottom: 16px;
+      font-size: auto;
+
+      .bottom-dm2 {
+        background: #E5252C;
+        color: #ffffff;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+// @keyframes shake {
+//   0%, 100% {
+//     transform: translateX(0);
+//   }
+//   10%, 30%, 50%, 70%, 90% {
+//     transform: translateX(-2px);
+//     color: #ffffff;
+//   }
+//   20%, 40%, 60%, 80% {
+//     transform: translateX(2px);
+//     color: #fafafa;
+//   }
+// }
+
+.rotate {
+  animation: shake 10s linear infinite;
+}
+
+// ====================Future===================
+
+
+.brand{
+padding: 20px;
+  img{
+    transform: scale(1.5);
+  }
+}

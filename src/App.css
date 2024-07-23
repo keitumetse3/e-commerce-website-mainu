@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+background-color: #ededed;
+}
+
+/* this code below set the pages to center */
+
+.App {
+  display: flex;
+  margin: 80px;
+  position: relative;
+  left: 70px;
+  height: 100vh;
+  border-radius: 9px;
+}
+
+/* Dont remove============================ */
+
+.card{
+  padding: 8px;
+  border: none !important;
+}
+
+
+/* .line {
+  width: 4px; 
+  height: 1130px; 
+  background: rgb(139, 139, 139);
+  position: absolute;
+  left: 84rem;
+  top: -10px;
+}
+.vert-line{
+  padding: 120px;
+} */

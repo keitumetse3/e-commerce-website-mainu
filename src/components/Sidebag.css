@@ -1,0 +1,28 @@
+.cart-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #EAEAEA;
+}
+
+.cart-item {
+    flex: 0 1 calc(33.33% - 10px);
+    margin: 5px; 
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box; 
+}
+
+.cart {
+    margin-right: 1.5rem;
+  
+}
+
+.bag-title {
+    text-align: center;
+}

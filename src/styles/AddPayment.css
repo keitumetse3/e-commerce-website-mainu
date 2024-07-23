@@ -1,0 +1,61 @@
+/* Center the form within the container */
+.container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Position the secure text and back link */
+  .secure-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .back-link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  /* Ensure responsiveness */
+  @media (max-width: 767.98px) {
+    .secure-text, .back-link {
+      position: static;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  .me{
+    padding: 5px 100px 5px 100px;
+    background-color: black;
+  }
+  
+  .secure-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .secure-text svg {
+    margin-right: 5px;
+    color:aqua !important;
+  }
+  
+  .back-link {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .back-link:hover {
+    color: #555;
+    text-decoration: underline;
+  }
+  
+  .btn-black {
+    background-color: black;
+    color: white;
+  }
+  
+  form {
+    height: fit-content;
+  }
