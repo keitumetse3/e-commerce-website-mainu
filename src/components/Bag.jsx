@@ -6,8 +6,8 @@ export let myBag = [];
 export let setMyBag = () => {};
 
 function Bag() {
-    const [cartItems, setCartItems] = React.useState(myBag);
 
+    const [cartItems, setCartItems] = React.useState(myBag);
     React.useEffect(() => {
         setCartItems(myBag);
     }, []);

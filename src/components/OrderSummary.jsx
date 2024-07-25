@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,7 +11,7 @@ const OrderSummary = ({ items }) => {
 
     return (
         <div className="container mt-5">
-            <h2>Order Summary</h2>
+            <h2>Daline</h2>
             <table className="table">
                 <thead>
                     <tr>

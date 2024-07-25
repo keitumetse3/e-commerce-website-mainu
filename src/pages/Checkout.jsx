@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Form, Button, Container, Row, Col, Card } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const ShippingAddressForm = ({ onSubmit }) => {
     const [formData, setFormData] = useState({
@@ -24,50 +27,90 @@ const ShippingAddressForm = ({ onSubmit }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label>Full Name:</label>
-                <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required />
-            </div>
-            <div>
-                <label>Address:</label>
-                <input type="text" name="address" value={formData.address} onChange={handleChange} required />
-            </div>
-            <div>
-                <label>City:</label>
-                <input type="text" name="city" value={formData.city} onChange={handleChange} required />
-            </div>
-            <div>
-                <label>State:</label>
-                <input type="text" name="state" value={formData.state} onChange={handleChange} required />
-            </div>
-            <div>
-                <label>Zip Code:</label>
-                <input type="text" name="zipCode" value={formData.zipCode} onChange={handleChange} required />
-            </div>
-            <div>
-                <label>Country:</label>
-                <input type="text" name="country" value={formData.country} onChange={handleChange} required />
-            </div>
-            <button type="submit">Submit</button>
-        </form>
+        <Form onSubmit={handleSubmit}>
+            <Form.Group controlId="fullName">
+                <Form.Label>Full Name</Form.Label>
+                <Form.Control 
+                    type="text" 
+                    name="fullName" 
+                    value={formData.fullName} 
+                    onChange={handleChange} 
+                    required 
+                />
+            </Form.Group>
+            <Form.Group controlId="address">
+                <Form.Label>Address</Form.Label>
+                <Form.Control 
+                    type="text" 
+                    name="address" 
+                    value={formData.address} 
+                    onChange={handleChange} 
+                    required 
+                />
+            </Form.Group>
+            <Form.Group controlId="city">
+                <Form.Label>City</Form.Label>
+                <Form.Control 
+                    type="text" 
+                    name="city" 
+                    value={formData.city} 
+                    onChange={handleChange} 
+                    required 
+                />
+            </Form.Group>
+            <Form.Group controlId="state">
+                <Form.Label>State</Form.Label>
+                <Form.Control 
+                    type="text" 
+                    name="state" 
+                    value={formData.state} 
+                    onChange={handleChange} 
+                    required 
+                />
+            </Form.Group>
+            <Form.Group controlId="zipCode">
+                <Form.Label>Zip Code</Form.Label>
+                <Form.Control 
+                    type="text" 
+                    name="zipCode" 
+                    value={formData.zipCode} 
+                    onChange={handleChange} 
+                    required 
+                />
+            </Form.Group>
+            <Form.Group controlId="country">
+                <Form.Label>Country</Form.Label>
+                <Form.Control 
+                    type="text" 
+                    name="country" 
+                    value={formData.country} 
+                    onChange={handleChange} 
+                    required 
+                />
+            </Form.Group>
+            <Button variant="primary" type="submit" className='bg-black p-2 px-12 '>
+                Submit
+            </Button>
+        </Form>
     );
 };
 
 const OrderSummary = ({ shippingAddress }) => {
     return (
-        <div>
-            <h2>Order Summary</h2>
-            {shippingAddress && (
-                <div>
-                    <h3>Shipping Address</h3>
-                    <p>{shippingAddress.fullName}</p>
-                    <p>{shippingAddress.address}</p>
-                    <p>{shippingAddress.city}, {shippingAddress.state} {shippingAddress.zipCode}</p>
-                    <p>{shippingAddress.country}</p>
-                </div>
-            )}
-        </div>
+        <Card>
+            <Card.Header>Order Summary</Card.Header>
+            <Card.Body>
+                {shippingAddress && (
+                    <>
+                        <h5>Shipping Address</h5>
+                        <p>{shippingAddress.fullName}</p>
+                        <p>{shippingAddress.address}</p>
+                        <p>{shippingAddress.city}, {shippingAddress.state} {shippingAddress.zipCode}</p>
+                        <p>{shippingAddress.country}</p>
+                    </>
+                )}
+            </Card.Body>
+        </Card>
     );
 };
 
@@ -79,14 +122,19 @@ const Checkout = () => {
     };
 
     return (
-        <>
-            <div>
-                <h2>Shipping Address</h2>
-                <ShippingAddressForm onSubmit={handleFormSubmit} />
-            </div>
-            <div>Review Your Bag Section</div>
-            <OrderSummary shippingAddress={shippingAddress} />
-        </>
+        <Container>
+            <Row>
+                <Col md={6}>
+                    <h2>Shipping Address</h2>
+                    <ShippingAddressForm onSubmit={handleFormSubmit} />
+                </Col>
+                <Col md={6}>
+                    <h2>Review Your Bag</h2>
+                    {/* Add your bag items component here */}
+                    <OrderSummary shippingAddress={shippingAddress} />
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

@@ -9,6 +9,7 @@ import './App.css';
 
 function App() {
   return (
+    <div className='App'>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Dashboard />} />
@@ -19,6 +20,7 @@ function App() {
         <Route path='/address' element={<AddAddress />} />
       </Routes>
     </BrowserRouter>
+    </div>
   );
 }
 
